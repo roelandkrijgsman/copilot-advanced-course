@@ -57,8 +57,8 @@ describe('Contoso API', () => {
     assert.ok(body.projectedAnnualPension > body.accruedToDate);
   });
 
-  test('POST /api/projections returns 422 for early retirement (backlog)', async () => {
-    const res = await api.post('/api/projections', { memberId: 'M-1004', retirementAge: 63 });
+  test('POST /api/projections returns 422 below the early-retirement minimum age', async () => {
+    const res = await api.post('/api/projections', { memberId: 'M-1004', retirementAge: 59 });
     assert.equal(res.status, 422);
   });
 
