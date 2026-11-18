@@ -46,8 +46,8 @@ test('projection at the standard retirement age adds future accrual', () => {
   assert.equal(result.retirementDate, '2040-04-15');
 });
 
-test('projection rejects early retirement (not supported yet)', () => {
+test('projection rejects a retirement age below the early-retirement minimum', () => {
   assert.throws(() => projectPension({
-    birthDate: '1972-04-15', fullTimeSalary: 52_000, partTimeFactor: 1, accruedToDate: 0, asOf: '2026-11-18', retirementAge: 63,
-  }), /early retirement is not supported/);
+    birthDate: '1972-04-15', fullTimeSalary: 52_000, partTimeFactor: 1, accruedToDate: 0, asOf: '2026-11-18', retirementAge: 59,
+  }), /between 60 and 68/);
 });

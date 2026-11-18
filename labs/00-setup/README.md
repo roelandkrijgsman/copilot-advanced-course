@@ -137,10 +137,10 @@ flowchart LR
 
 ### ✅ Checkpoint
 
-- [ ] `npm run verify` shows **✅ Ready for the workshop**
-- [ ] The app shows 8 members on port 3000
-- [ ] Your bottom bar reads **Copilot · Interactive · Manual permissions**
-- [ ] You can name the 3 files involved in the statement calculation
+- [x] `npm run verify` shows **✅ Ready for the workshop**
+- [x] The app shows 8 members on port 3000
+- [x] Your bottom bar reads **Copilot · Interactive · Manual permissions**
+- [x] You can name the 3 files involved in the statement calculation
 
 ---
 
